@@ -1,0 +1,9 @@
+<h1>Main template</h1>
+<input type="text" ng-model="sitename">
+<ul>
+<li ng-repeat="link in links[0] | filter:sitename | orderBy: 'created_at'">
+  <a href="{{ link.base_url }}/{{ link.code }}">{{ link.title }}</a>
+  <br /><span>Visits: {{ link.visits }}</span> | <span><a href="{{link.id}}.html">Stats</a></span>
+</li>
+</ul>
+
